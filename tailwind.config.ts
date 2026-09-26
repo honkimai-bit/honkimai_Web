@@ -8,11 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        kinari: "#F5F0E6",       
+        "deep-green": "#244A36", 
+        gold: "#B58A3A",         
+        "sea-green": "#2D7774",  
+        "text-main": "#252522",  
       },
+      fontFamily: {
+        serif: ['"Shippori Mincho"', '"Noto Serif JP"', 'serif'],
+        sans: ['"Noto Sans JP"', 'sans-serif'],
+      }
     },
   },
   plugins: [],

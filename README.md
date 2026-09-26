@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 海士の本氣米 公式ブランドサイト
 
-## Getting Started
+海士町（あまちょう）のブランド米「海士の本氣米」の公式サイトです。
 
-First, run the development server:
+## 技術スタック
+- Framework: Next.js (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Deployment: Vercel 推奨
 
+## ローカルでの開発・動作確認
 ```bash
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動 (http://localhost:3000)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# プロダクションビルド
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## コンテンツの更新方法
+本サイトは静的生成（SSG）を基本としています。
+- **テキストの変更**: `src/app/` 以下の各 `page.tsx` のテキストを直接編集してください。
+- **よくある質問（FAQ）の追加**: `src/app/faq/page.tsx` 内の `faqs` 配列に質問と回答を追加するだけで、画面上の表示と構造化データ（JSON-LD）の両方が自動更新されます。
+- **アクセス解析（GA4）の設定**: `.env.local` ファイルを作成し、`NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX` と設定してください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 画像の差し替え方法
+現在、画像はプレースホルダー（SVG）になっています。正式な写真が用意でき次第、`public/images/` 以下の同名ファイルを上書きしてください。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+対象ファイル：
+- `hero-rice.jpg` または `hero-rice.svg` (メインビジュアル: 炊きたてのごはん)
+- `rice-koshihikari.jpg` または `rice-koshihikari.svg` (コシヒカリ)
+- `rice-kinumusume.jpg` または `rice-kinumusume.svg` (きぬむすめ)
+- `soil-cattle.jpg` または `soil-cattle.svg` (隠岐牛の完熟堆肥)
+- `soil-oyster-shell.jpg` または `soil-oyster-shell.svg` (牡蠣殻粉末)
+- `ama-rice-field.jpg` または `ama-rice-field.svg` (海士町の田んぼ)
+- `producer-group.jpg` または `producer-group.svg` (生産者)
+- `gift-package.jpg` または `gift-package.svg` (贈答用パッケージ)
 
-## Learn More
+※ `svg` から `jpg` など拡張子が変わる場合は、対応する `page.tsx` 側の `src="/images/xxx.svg"` というパスも `.jpg` に変更してください。
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Vercelへのデプロイ方法
+1. GitHubへこのリポジトリをPushします。（※まずはプライベートリポジトリ推奨）
+2. Vercelのダッシュボードから「Add New...」>「Project」を選択します。
+3. Pushしたリポジトリをインポートします。
+4. Framework Preset が「Next.js」になっていることを確認し、「Deploy」をクリックします。
+5. （必要に応じて）Settings > Environment Variables から `NEXT_PUBLIC_GA_ID` を設定し、再デプロイしてください。
