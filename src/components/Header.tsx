@@ -10,6 +10,7 @@ const links = [
   ['/gift', '贈り物'],
   ['/producers', 'つくる人'],
   ['/story', '海士町と本氣米'],
+  ['/faq', 'よくある質問'],
 ];
 
 export default function Header() {
@@ -20,8 +21,7 @@ export default function Header() {
     }}>
       <div className="site-header-inner">
         <Link href="/" className="site-brand" onClick={() => setOpen(false)}>
-          <img src="/images/brand-logo.png" alt="" width={34} height={48} />
-          <span>海士の本氣米</span>
+          <img src="/images/brand-logo-base.jpg" alt="海士の本氣米" width={460} height={180} />
         </Link>
         <button type="button" className="menu-toggle" aria-expanded={open} aria-controls="site-navigation" onClick={() => setOpen(!open)}>
           {open ? '閉じる' : 'メニュー'}

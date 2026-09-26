@@ -10,6 +10,14 @@ const faqs = [
     answer: "島根県隠岐郡海士町で育てられたブランド米です。隠岐牛の完熟堆肥といわがき春香の牡蠣殻粉末を土づくりに利用し、甘くてもっちりした食感が特徴です。"
   },
   {
+    question: "コシヒカリときぬむすめは、どう違いますか？",
+    answer: "コシヒカリは、ふっくらともっちりした食感で、甘みとコクを楽しめるお米です。\n\nきぬむすめは、炊き上がりの美しさと一粒一粒の弾力が特徴。コシヒカリに比べて軽やかで、あっさりした味わいです。公式ショップでは朝食にもおすすめしています。\n\n甘みやもっちり感を楽しみたい方はコシヒカリ、あっさりした味わいがお好みの方はきぬむすめを、選ぶときの目安にしてみてください。迷ったら、食べ比べセットでお好みを探すのもおすすめです。",
+    sources: [
+      { label: "コシヒカリの商品説明", href: "https://honkimai.thebase.in/items/37024519" },
+      { label: "きぬむすめの商品説明", href: "https://honkimai.thebase.in/items/37024548" },
+    ],
+  },
+  {
     question: "どこで作られていますか？",
     answer: "島根県の離島、海士町（あまちょう）の豊かな自然と水に恵まれた田んぼで作られています。"
   },
@@ -54,7 +62,16 @@ export default function FAQ() {
             </h2>
             <div className="flex gap-4 opacity-90 leading-loose">
               <span className="text-sea-green font-bold">A.</span>
-              <p>{faq.answer}</p>
+              <div className="min-w-0">
+                <p className="whitespace-pre-line">{faq.answer}</p>
+                {faq.sources && (
+                  <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-deep-green">
+                    {faq.sources.map(source => (
+                      <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{source.label} ↗</a>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ))}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BrandVideo from "@/components/BrandVideo";
 import TrackedLink from "@/components/TrackedLink";
 
 export default function Home() {
@@ -88,6 +89,11 @@ export default function Home() {
           <p>波多 剛をはじめとする、海士の本氣米生産組合のメンバー。<br />妥協のない米づくりを行っています。</p>
           <TrackedLink href="/producers" eventName="click_producers_page" className="home-text-link">生産者の本氣のルールを見る <span aria-hidden="true">→</span></TrackedLink>
         </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-6 pb-20 md:pb-28" aria-labelledby="brand-video-title">
+        <h2 id="brand-video-title" className="text-2xl md:text-4xl font-serif mb-8 text-center">映像で見る、海士の本氣米。</h2>
+        <BrandVideo />
       </section>
 
       {/* 6. 購入商品を用途別に縦に並べる */}

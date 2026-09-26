@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import BrandVideo from '@/components/BrandVideo';
 
 export const metadata: Metadata = {
   title: 'つくる人',
@@ -14,16 +15,10 @@ export default function Producers() {
         <Image src="/images/producers-illustration.png" alt="海士の本氣米生産組合のメンバー" fill className="object-contain" />
       </div>
 
-      <div className="w-full aspect-video mb-8">
-        <iframe
-          className="w-full h-full"
-          src="https://www.youtube.com/embed/q6ovwLu0o7A"
-          title="海士の本氣米 プロモーションムービー"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+      <div className="mb-12">
+        <BrandVideo />
       </div>
-      
+
       <div className="text-center mb-16">
         <a href="https://www.instagram.com/ama_honkimai" target="_blank" rel="noopener noreferrer" className="inline-block border-b border-text-main pb-1 hover:opacity-50 transition-opacity tracking-widest font-bold">
           生産者の日常を発信中（公式Instagram） ↗

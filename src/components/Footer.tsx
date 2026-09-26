@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
         <div>
           <div className="mb-6 bg-white inline-block px-4 py-2 border border-text-main/20">
-            <img src="/images/brand-logo.png" alt="海士の本氣米" className="h-16 w-auto" />
+            <img src="/images/brand-logo-base.jpg" alt="海士の本氣米" width={460} height={180} className="w-[230px] max-w-full h-auto" />
           </div>
           <p className="text-sm opacity-90 leading-loose">
             島根県隠岐郡海士町<br />

@@ -65,11 +65,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid #2d7774; outline-offs
 .home-product > p { font-size: 14px; line-height: 2; }
 .home-product > a { margin-top: auto; }
 .page-image { max-width: 560px; aspect-ratio: 1; margin-left: auto; margin-right: auto; }
-.site-header { position: sticky; top: 0; z-index: 50; background: rgba(245,240,230,.98); border-bottom: 1px solid rgba(37,37,34,.1); }
+.site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.98); border-bottom: 1px solid rgba(37,37,34,.1); }
 .site-header-inner { max-width: 1280px; margin: auto; min-height: 80px; padding: 12px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .site-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-.site-brand img { width: 34px; height: 48px; object-fit: contain; }
-.site-brand span { font-family: "Shippori Mincho", serif; font-size: 16px; letter-spacing: .08em; }
+.site-brand img { width: 184px; height: 72px; object-fit: contain; }
 .site-nav { display: flex; gap: 24px; font-size: 12px; }
 .site-nav a:hover { color: #2d7774; }
 .menu-toggle { display: none; font-size: 13px; padding: 9px 12px; border: 1px solid #b9bcb1; }
@@ -93,5 +92,5 @@ a:focus-visible, button:focus-visible { outline: 2px solid #2d7774; outline-offs
   .home-producers-art { align-self: center; }
   .home-products { grid-template-columns: 1fr; gap: 56px; }
   .home-product { max-width: 480px; width: 100%; margin: auto; }
-  .site-brand span { font-size: 14px; }
+  .site-brand img { width: 153px; height: 60px; }
 }

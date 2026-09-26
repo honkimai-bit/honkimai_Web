@@ -62,3 +62,11 @@ npm run deploy
 
 どちらも配信前にビルドを実行します。`npm run deploy` にはCloudflareへの認証が必要です。
 GA4を使用する場合は、Cloudflareのビルド変数に `NEXT_PUBLIC_GA_ID` を設定して再ビルドしてください。
+
+## ロゴ・動画・FAQの参照元
+- ヘッダー・フッターのロゴ: BASE公式ショップで使用中の本氣米ロゴ（`public/images/brand-logo-base.jpg`）。元画像を改変せず使用。
+  - https://baseec-img-mng.akamaized.net/images/user/logo/b56adaa811b6326db60047ad30ed87f9.jpg
+- 動画: 既存の本氣米プロモーション映像（https://youtu.be/q6ovwLu0o7A）。トップと「つくる人」で共通コンポーネント `BrandVideo` を使用。
+- 品種比較FAQ: BASEの商品説明を参照（2026年9月26日確認）。
+  - コシヒカリ: https://honkimai.thebase.in/items/37024519
+  - きぬむすめ: https://honkimai.thebase.in/items/37024548
