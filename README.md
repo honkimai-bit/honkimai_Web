@@ -6,7 +6,7 @@
 - Framework: Next.js (App Router)
 - Language: TypeScript
 - Styling: Tailwind CSS
-- Deployment: Vercel 推奨
+- Deployment: Cloudflare Workers（静的アセット配信）
 
 ## ローカルでの開発・動作確認
 ```bash
@@ -41,9 +41,24 @@ npm run build
 
 ※ `svg` から `jpg` など拡張子が変わる場合は、対応する `page.tsx` 側の `src="/images/xxx.svg"` というパスも `.jpg` に変更してください。
 
-## Vercelへのデプロイ方法
-1. GitHubへこのリポジトリをPushします。（※まずはプライベートリポジトリ推奨）
-2. Vercelのダッシュボードから「Add New...」>「Project」を選択します。
-3. Pushしたリポジトリをインポートします。
-4. Framework Preset が「Next.js」になっていることを確認し、「Deploy」をクリックします。
-5. （必要に応じて）Settings > Environment Variables から `NEXT_PUBLIC_GA_ID` を設定し、再デプロイしてください。
+## Cloudflare Workersへのデプロイ方法
+本サイトは `next build` で静的HTML・CSS・JavaScriptを `out/` に生成します。
+`wrangler.jsonc` にビルドコマンドと配信フォルダを定義しています。
+`next/image` は元画像を配信し、サーバー側の画像最適化は使用しません。
+
+Cloudflare Workers Builds の設定：
+- リポジトリ: `honkimai-bit/honkimai_Web`
+- プロダクションブランチ: `main`
+- ルートディレクトリ: `/`
+- ビルドコマンド: 空欄（Wranglerが `npm run build` を実行）
+- デプロイコマンド: `npx wrangler deploy`
+- Worker名: `honkimai-web`
+
+ローカルでの配信確認・デプロイ：
+```bash
+npm start
+npm run deploy
+```
+
+どちらも配信前にビルドを実行します。`npm run deploy` にはCloudflareへの認証が必要です。
+GA4を使用する場合は、Cloudflareのビルド変数に `NEXT_PUBLIC_GA_ID` を設定して再ビルドしてください。
