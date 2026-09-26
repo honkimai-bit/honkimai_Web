@@ -10,8 +10,8 @@ export default function Story() {
     <div className="max-w-4xl mx-auto px-6 py-20">
       <h1 className="text-4xl font-serif font-bold mb-12 text-text-main">海士町と本氣米</h1>
       
-      <div className="relative h-64 md:h-96 w-full mb-12 overflow-hidden">
-        <Image src="/images/ama-package.png" alt="海士町の風景と本氣米" fill className="object-cover" />
+      <div className="page-image relative w-full mb-12">
+        <Image src="/images/ama-package.png" alt="海士町の風景と本氣米" fill sizes="(max-width: 767px) 90vw, 560px" className="object-contain" />
       </div>
 
       <div className="space-y-16">

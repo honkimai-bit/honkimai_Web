@@ -10,7 +10,7 @@ export default function Producers() {
     <div className="max-w-4xl mx-auto px-6 py-20">
       <h1 className="text-4xl font-serif font-bold mb-12 text-text-main">つくる人</h1>
       
-      <div className="relative h-[400px] md:h-[600px] w-full mb-12">
+      <div className="relative w-[206px] max-w-full aspect-[206/290] mx-auto mb-12">
         <Image src="/images/producers-illustration.png" alt="海士の本氣米生産組合のメンバー" fill className="object-contain" />
       </div>
 

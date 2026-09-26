@@ -32,3 +32,66 @@ h1, h2, h3, h4, h5, h6 {
 a {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* Photographs retain their original proportions at every viewport width. */
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1280px;
+  margin: auto;
+  padding: 40px 48px 56px;
+  gap: 40px;
+  background: var(--background);
+}
+.home-hero-copy { padding: 16px 0; }
+.home-origin { font-size: 12px; letter-spacing: .18em; color: #526456; margin-bottom: 32px; }
+.home-hero h1 { font-size: clamp(28px, 3.8vw, 49px); line-height: 1.7; letter-spacing: .02em; color: #244a36; }
+.home-hero-lead { font-size: 14px; margin: 24px 0 36px; letter-spacing: .08em; }
+.home-hero-photo img, .home-soil-photo img { display: block; width: 100%; height: auto; }
+.home-button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; padding: 15px 24px; color: white; background: #244a36; font-size: 13px; letter-spacing: .08em; transition: background .2s; }
+.home-button:hover { background: #173324; }
+a:focus-visible, button:focus-visible { outline: 2px solid #2d7774; outline-offset: 5px; }
+.home-soil { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; max-width: 1152px; margin: auto; padding: 32px 24px 88px; }
+.home-soil h2, .home-producers h2 { font-size: clamp(26px, 3vw, 36px); line-height: 1.7; margin-bottom: 28px; }
+.home-soil-copy p { font-size: 14px; line-height: 2.15; }
+.home-producers { display: flex; align-items: center; gap: 64px; max-width: 960px; padding: 80px 24px; margin: auto; }
+.home-producers-art { width: 206px; height: auto; flex-shrink: 0; }
+.home-producers p { font-size: 15px; line-height: 2.2; margin-bottom: 28px; }
+.home-text-link { font-size: 14px; border-bottom: 1px solid #244a36; padding-bottom: 8px; color: #244a36; }
+.home-products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.home-product { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.home-product-photo { position: relative; width: 100%; aspect-ratio: 1; margin-bottom: 24px; }
+.home-product > p { font-size: 14px; line-height: 2; }
+.home-product > a { margin-top: auto; }
+.page-image { max-width: 560px; aspect-ratio: 1; margin-left: auto; margin-right: auto; }
+.site-header { position: sticky; top: 0; z-index: 50; background: rgba(245,240,230,.98); border-bottom: 1px solid rgba(37,37,34,.1); }
+.site-header-inner { max-width: 1280px; margin: auto; min-height: 80px; padding: 12px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.site-brand img { width: 34px; height: 48px; object-fit: contain; }
+.site-brand span { font-family: "Shippori Mincho", serif; font-size: 16px; letter-spacing: .08em; }
+.site-nav { display: flex; gap: 24px; font-size: 12px; }
+.site-nav a:hover { color: #2d7774; }
+.menu-toggle { display: none; font-size: 13px; padding: 9px 12px; border: 1px solid #b9bcb1; }
+@media (max-width: 1023px) {
+  .site-header-inner { padding: 10px 24px; min-height: 72px; }
+  .menu-toggle { display: block; }
+  .site-nav { display: none; }
+  .site-nav.is-open { display: grid; position: absolute; left: 0; right: 0; top: 100%; padding: 16px 24px 24px; gap: 0; background: #f5f0e6; border-bottom: 1px solid #b9bcb1; }
+  .site-nav.is-open a { padding: 12px 0; font-size: 14px; border-top: 1px solid rgba(37,37,34,.1); }
+  .home-hero { padding: 32px 24px 40px; gap: 24px; }
+}
+@media (max-width: 767px) {
+  .home-hero { grid-template-columns: 1fr; gap: 28px; padding: 28px 24px 32px; }
+  .home-hero-copy { padding: 0; }
+  .home-origin { margin-bottom: 16px; font-size: 11px; }
+  .home-hero h1 { font-size: clamp(25px, 6.7vw, 42px); line-height: 1.65; }
+  .home-hero-lead { font-size: 12px; margin: 16px 0 22px; }
+  .home-hero-photo { width: 100%; }
+  .home-soil { grid-template-columns: 1fr; gap: 32px; padding-bottom: 64px; }
+  .home-producers { flex-direction: column; align-items: flex-start; gap: 32px; padding: 64px 24px; }
+  .home-producers-art { align-self: center; }
+  .home-products { grid-template-columns: 1fr; gap: 56px; }
+  .home-product { max-width: 480px; width: 100%; margin: auto; }
+  .site-brand span { font-size: 14px; }
+}

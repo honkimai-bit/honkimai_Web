@@ -9,8 +9,8 @@ export default function Gift() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-20">
       <h1 className="text-4xl font-serif font-bold mb-12 text-text-main">贈り物</h1>
-      <div className="relative h-64 md:h-96 w-full mb-12 overflow-hidden">
-        <Image src="/images/gift-set.png" alt="複数個セット・贈答セット" fill className="object-cover" />
+      <div className="page-image relative w-full mb-12">
+        <Image src="/images/gift-set.png" alt="複数個セット・贈答セット" fill sizes="(max-width: 767px) 90vw, 560px" className="object-contain" />
       </div>
       <h2 className="text-2xl font-serif font-bold mb-6 text-text-main">米だけではなく、話したくなる背景まで。</h2>
       <p className="leading-loose mb-8">
