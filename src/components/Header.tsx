@@ -6,7 +6,7 @@ import { useState } from 'react';
 const links = [
   ['/taste', 'おいしさと土づくり'],
   ['/products#choose', '商品を選ぶ'],
-  ['/oseibo', 'お歳暮'],
+  ['/oseibo', 'お歳暮（準備中）'],
   ['/gift', '贈り物'],
   ['/producers', 'つくる人'],
   ['/story', '海士町と本氣米'],
