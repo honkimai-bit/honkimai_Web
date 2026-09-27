@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const links = [
   ['/taste', 'おいしさと土づくり'],
-  ['/products', '商品を選ぶ'],
+  ['/products#choose', '商品を選ぶ'],
   ['/oseibo', 'お歳暮'],
   ['/gift', '贈り物'],
   ['/producers', 'つくる人'],
@@ -27,7 +27,9 @@ export default function Header() {
           {open ? '閉じる' : 'メニュー'}
         </button>
         <nav id="site-navigation" aria-label="メインメニュー" className={`site-nav${open ? ' is-open' : ''}`}>
-          {links.map(([href, label]) => (
+          {links.map(([href, label]) => href === '/products#choose' ? (
+            <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
+          ) : (
             <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>
           ))}
         </nav>
